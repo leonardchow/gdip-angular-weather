@@ -1,0 +1,38 @@
+<div class="row" *ngIf="cityData">
+  <div class="col-xs-12">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>
+          {{ cityData.city }}, {{ cityData.country }}
+        </h2>
+      </div>
+    </div>
+    <div *ngFor="let datapoint of datapoints">
+      <div class="row">
+        <div class="col-xs-2">
+          <img src="{{ datapoint.iconUrl }}" />
+        </div>
+        <div class="col-xs-10">
+          <div>
+            <h4>
+              {{ datapoint.main }}
+            </h4>
+          </div>
+          <div>
+            <h5>
+              {{ datapoint.description }}
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+      <p>
+        <iframe
+          width="500"
+          height="250"
+          frameborder="0" style="border:0"
+          [src]="cityData.mapSrc()" allowfullscreen>
+        </iframe>
+      </p>
+  </div>
+</div>

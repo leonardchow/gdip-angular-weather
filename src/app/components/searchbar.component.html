@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form (submit)="submitted()" #searchForm="ngForm" novalidate>
+      <div class="form-group" [ngClass]="{'has-error': searchText.invalid}">
+        <label for="search">Get weather for a city</label>
+        <input name="search" id="search" class="form-control has-error" ngModel="" #searchText="ngModel" required
+          >
+      </div>
+
+      <input type="submit" value="Go" class="btn btn-primary" [disabled]="searchText.invalid">
+    </form>
+  </div>
+</div>

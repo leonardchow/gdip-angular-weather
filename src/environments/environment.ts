@@ -4,5 +4,10 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiKey: 'WEATHERAPIKEY',
+  apiUrl: 'https://api.openweathermap.org/data/2.5/',
+  apiIconUrl: 'http://openweathermap.org/img/w/',
+  mapsApiEmbed: 'https://www.google.com/maps/embed/v1/',
+  mapsApiKey: 'MAPSAPIKEY',
 };
